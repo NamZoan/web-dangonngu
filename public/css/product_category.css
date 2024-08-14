@@ -1,0 +1,233 @@
+.breadcrumbs li {
+  font-size: 12px !important;
+}
+
+.products h2 a {
+  font-size: 20px;
+}
+
+.product-filters {
+  padding: 0.5rem 1.5rem;
+  background-color: #fefefe;
+}
+
+.product-filters label {
+  color: var(----color);
+}
+
+.product-filters .menu.nested {
+  margin-left: 0rem;
+  margin-bottom: 0.9rem;
+}
+
+.product-filters .menu > li > a {
+  padding-left: 0;
+  /* color: var(--link_a_color); */
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* .product-filters .menu > li > a:hover{
+  padding-left: 0;
+  color: #27476E;
+  font-size: 0.99rem;
+} */
+
+.product-filters .is-accordion-submenu-parent > a::after {
+  border-color: #cacaca transparent transparent;
+}
+
+.product-filters .clear-all {
+  font-size: 0.9rem;
+  color: #cacaca;
+}
+
+.product-filters .more {
+  color: #1779ba;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.product-filters-header {
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.product-filters-tab {
+  border-top: 1px solid #e6e6e6;
+}
+
+.product-filters-tab:last-child() {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.product-card {
+  background-color: #fefefe;
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-card-thumbnail {
+  display: block;
+  position: relative;
+}
+
+.product-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.product-card-desc {
+  color: #8a8a8a;
+  display: block;
+  font-size: 0.85rem;
+}
+
+.product-card-price {
+  color: #3e3e3e;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+
+.product-card-sale {
+  color: #cacaca;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+  text-decoration: line-through;
+}
+
+.product-card-colors {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.product-card-color-option {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+:root {
+  --range-bar-color: hsl(0, 0%, 0%, 20%);
+  --range-progress-bar-color: #1779ba;
+  --range-thumb-color: var(--range-progress-bar-color);
+}
+
+.sliders_control {
+  position: relative;
+  min-height: 50px;
+}
+
+.numbers {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.range-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  input[type="range"] {
+    --left-per: 0%;
+    --right-per: 100%;
+
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    outline: none;
+    pointer-events: none;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    opacity: 1;
+    height: 0.5rem;
+    border: none;
+    box-shadow: none;
+    border-radius: 9999px;
+  }
+
+  input[type="range"].left-range::-webkit-slider-runnable-track {
+    background: linear-gradient(
+      90deg,
+      var(--range-bar-color) var(--left-per),
+      var(--range-progress-bar-color) var(--left-per),
+      var(--range-progress-bar-color) var(--right-per),
+      var(--range-bar-color) var(--right-per)
+    );
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -8px;
+    /* Centers thumb on the track */
+    background-color: var(--range-thumb-color);
+    height: 24px;
+    width: 24px;
+    pointer-events: all;
+    border-radius: 1rem;
+    outline: 5px solid white;
+    outline-offset: -20px;
+    box-shadow: 0 0 10px var(--range-thumb-color);
+    cursor: pointer;
+  }
+}
+
+#range-two {
+  --range-progress-bar-color: hsl(250, 35%, 50%);
+  --range-thumb-color: var(--range-progress-bar-color);
+}
+
+#range-three,
+#range-four,
+#range-five {
+  --range-progress-bar-color: hsl(320, 35%, 50%);
+  --range-thumb-color: var(--range-progress-bar-color);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 40ch;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 3px solid hsl(0, 70%, 60%);
+  border-radius: 1rem;
+  outline: 2px solid hsl(0, 30%, 60%);
+  outline-offset: -8px;
+}
+
+.info > div {
+  display: grid;
+  grid-template-columns: 15ch 1fr;
+}
+
+#info-size-range {
+  display: grid;
+  grid-template-rows: 3ch1fr;
+}
+
+#info-size-range > div {
+  display: grid;
+  grid-template-columns: 3ch 1fr;
+}
+
+
+.price-item svg {
+  margin: auto;
+}

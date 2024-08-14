@@ -1,0 +1,134 @@
+:root {
+  --width: 30%;
+  --gap: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel .container {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.carousel .slider {
+  height: 100%;
+}
+
+.slider-track {
+  position: relative;
+  left: calc(-56% - var(--gap) * 2);
+  height: inherit;
+  display: flex;
+  gap: var(--gap);
+  list-style-type: none;
+  transition: transform 0.8s;
+
+  & .item {
+    min-width: var(--width);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (width < 1000px) {
+  .slider-track {
+    left: calc(-99% - var(--gap) * 2);
+
+    & .item {
+      min-width: 50%;
+    }
+  }
+}
+
+@media (width < 700px) {
+  .slider-track {
+    left: calc(-190% - var(--gap) * 2);
+
+    & .item {
+      min-width: 100%;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item a {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-decoration: none;
+}
+
+.item h3 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.item h3:hover {
+  text-decoration: underline;
+}
+
+/* dropdown end */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel .container {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.carousel .slider {
+  height: 100%;
+}
+
+.slider-track {
+  position: relative;
+  left: calc(-56% - var(--gap) * 2);
+  height: inherit;
+  display: flex;
+  gap: var(--gap);
+  list-style-type: none;
+  transition: transform 0.8s;
+
+  & .item {
+    min-width: var(--width);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (width < 1000px) {
+  .slider-track {
+    left: calc(-99% - var(--gap) * 2);
+
+    & .item {
+      min-width: 50%;
+    }
+  }
+}
+
+@media (width < 700px) {
+  .slider-track {
+    left: calc(-190% - var(--gap) * 2);
+
+    & .item {
+      min-width: 100%;
+    }
+  }
+}

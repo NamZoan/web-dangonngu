@@ -1,0 +1,350 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    display: block;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-container {
+    flex: 1;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-item img {
+    border: 0.5px solid #0099cc;
+    box-shadow: 0 0 5px 0 rgba(0, 153, 204, 0.5);
+}
+
+.inactive {
+    display: none !important;
+}
+
+.page {
+    width: 100%;
+    margin-top: 73px;
+}
+
+.adsPopup {
+    width: 100%;
+    min-height: 325px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    iframe {
+        max-width: 400px;
+    }
+
+    .adsPopup {
+        max-width: 400px;
+    }
+
+    img {
+        max-width: 400px;
+    }
+
+    .main-container {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 580px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 892px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container {
+        display: none !important;
+    }
+
+    .left-container-mobile {
+        display: block !important;
+    }
+
+    .left-container,
+    .right-container {
+        flex: none;
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-container {
+    align-items: flex-end;
+}
+
+.left-container,
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container-mobile {
+    display: none;
+}
+
+h2 {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    /* width: 100%; */
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body {
+    margin: 0;
+}
+
+.list-category {
+    list-style-type: none;
+    display: flex;
+}
+
+.list-category li {
+    margin: auto 10px;
+}
+
+.link-category {
+    text-decoration: none;
+    color: #9b9b9b;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.link-category:hover {
+    color: #0099cc;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.nav-header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.search-container:focus-within {
+    border-color: #0099cc;
+}
+
+.search-container:focus-within button {
+    background-color: #0099cc;
+}
+
+.search-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: #ccc;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.search-container button svg {
+    margin: 3px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+    }
+}
+
+.main {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .right-header {
+        display: none;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-header .category-list {
+    display: flex;
+}
+
+.nav-header .category-list li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+/* Ẩn danh sách danh mục khi độ rộng màn hình nhỏ hơn 776px */
+@media screen and (max-width: 776px) {
+    .header {
+        border-bottom: #ffffff solid 2px;
+        background-color: #0099cc;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-header {
+        display: block;
+    }
+
+    .left-header {
+        justify-content: space-between;
+    }
+
+    .category-list {
+        position: absolute;
+        right: 0;
+        background-color: #ffffff;
+        z-index: 1;
+        padding: 0px;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+    }
+
+    .menu-toggle .bar {
+        width: 100%;
+        height: 5px;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+
+    /* CSS cho khung dropdown */
+    .category-list.dropdown {
+        display: block;
+        margin: 0px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0099cc;
+        z-index: 1;
+        padding: 0;
+        transform: scaleY(0);
+        /* Bắt đầu với độ cao 0 */
+        transform-origin: top;
+        transition: transform 0.3s ease;
+    }
+
+    .category-list.dropdown.active {
+        transform: scaleY(1);
+        /* Khi có lớp .active, hiển thị dropdown */
+    }
+
+    .category-list.dropdown li {
+        list-style-type: none;
+        border-bottom: #ffffff solid 1px;
+    }
+
+    .category-list.dropdown li a {
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .category-list ul:focus-within {
+        background-color: #0099cc;
+    }
+}

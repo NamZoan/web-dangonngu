@@ -1,0 +1,9 @@
+.payment h6 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.multi-step-checkout-form-divider {
+    margin: 0.9375rem;
+}
